@@ -3,7 +3,7 @@ The Library Management System SQL schema efficiently manages data for library br
 
 Library Management System - SQL
 
-This project implements a Library Management System using SQL. It involves creating a database named `library` with six tables: `Branch`, `Employee`, `Books`, `Customer`, `IssueStatus`, and `ReturnStatus`. Each table is defined with specific attributes and relationships, including primary keys and foreign keys to ensure data integrity.
+This project implements a Library Management System using SQL. It involves creating a database named library with six tables: Branch, Employee, Books, Customer, IssueStatus, and ReturnStatus. Each table is defined with specific attributes and relationships, including primary keys and foreign keys to ensure data integrity.
 
 Database Schema:
 
@@ -22,7 +22,7 @@ This table stores information about the library employees.
 - Emp_name: String
 - Position: String
 - Salary: Decimal
-- Branch_no: Integer, Foreign Key references `Branch(Branch_no)`
+- Branch_no: Integer, Foreign Key references Branch(Branch_no)
 
 3. Books
 This table stores information about the books available in the library.
@@ -47,10 +47,10 @@ This table stores information about the library customers.
 This table tracks the books that have been issued to customers.
 
 - Issue_Id: Integer, Primary Key
-- Issued_cust: Integer, Foreign Key references `Customer(Customer_Id)`
+- Issued_cust: Integer, Foreign Key references Customer(Customer_Id)
 - Issued_book_name: String
 - Issue_date: Date
-- Isbn_book: String, Foreign Key references `Books(ISBN)`
+- Isbn_book: String, Foreign Key references Books(ISBN)
 
 6. ReturnStatus
 This table tracks the books that have been returned by customers.
@@ -59,4 +59,4 @@ This table tracks the books that have been returned by customers.
 - Return_cust: Integer
 - Return_book_name: String
 - Return_date: Date
-- Isbn_book2: String, Foreign Key references `Books(ISBN)`
+- Isbn_book2: String, Foreign Key references Books(ISBN)
